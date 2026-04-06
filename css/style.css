@@ -8,7 +8,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #133337;
   line-height: 1.6;
 }
@@ -49,7 +49,7 @@ h2 {
 
 .btn-card {
   display: inline-block;
-  background-color: #AF634D;
+  background-color: #af634d;
   color: #ffffff;
   padding: 8px 20px;
   border-radius: 20px;
@@ -63,7 +63,7 @@ h2 {
 }
 
 .btn-header {
-  background-color: #AF634D;
+  background-color: #af634d;
   color: rgb(255, 255, 255);
   padding: 8px 20px;
   border-radius: 20px;
@@ -82,7 +82,7 @@ header {
   position: sticky;
   top: 0;
   background-color: #133337;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   z-index: 100;
   padding: 14px 0;
 }
@@ -116,7 +116,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #AF634D;
+  color: #af634d;
 }
 
 /* ===========================
@@ -193,7 +193,7 @@ nav ul li a:hover {
 .card {
   background-color: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   width: 300px;
   overflow: hidden;
   text-align: left;
@@ -454,11 +454,14 @@ footer {
 .footer-inner {
   max-width: 1100px;
   margin: 0 auto;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
   gap: 20px;
+
+  flex-wrap: wrap;
+  text-align: left;
 }
 
 .footer-logo {
@@ -467,6 +470,7 @@ footer {
   color: #ffffff;
 }
 
+/* NAV DO FOOTER */
 .footer-nav {
   display: flex;
   gap: 20px;
@@ -478,43 +482,41 @@ footer {
 }
 
 .footer-nav a:hover {
-  color: #AF634D;
+  color: #af634d;
 }
 
+/* REDES SOCIAIS */
+.footer-social {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-social a {
+  color: #ffffff;
+  font-size: 1.3rem;
+  transition:
+    color 0.3s,
+    transform 0.2s;
+}
+
+.footer-social a:hover {
+  color: #af634d;
+  transform: translateY(-2px);
+}
+
+/* COPYRIGHT */
 .footer-copy {
   font-size: 0.85rem;
   color: #ffffff;
   width: 100%;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 /* ===========================
-   RESPONSIVIDADE BÁSICA
+   RESPONSIVO
 =========================== */
 @media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    margin: 30px auto;
-  }
-
-  .hero-image {
-    max-width: 100%;
-  }
-
-  .sobre {
-    flex-direction: column;
-  }
-
-  nav ul {
-    display: none;
-  }
-
-  .ebook-inner {
-    flex-direction: column;
-  }
-
   .footer-inner {
     flex-direction: column;
     text-align: center;
