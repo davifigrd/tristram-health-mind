@@ -1,0 +1,37 @@
+<!-- 1. contato.html <form> -->
+
+<!-- ========== HTML ========== -->
+
+<form>
+  <label>Nome</label>
+  <input type="text" placeholder="Seu nome">
+  
+  <label>Email</label>
+  <input type="email" placeholder="Seu email">
+  
+  <label>Assunto</label>
+  <input type="text" placeholder="Assunto">
+  
+  <label>Mensagem</label>
+  <textarea placeholder="Digite sua mensagem"></textarea>
+  
+  <button type="submit">Enviar</button>
+</form>
+
+<!-- ========== CSS ========== -->
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, textarea {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+button {
+  background: #4CAF50;
+  color: white;
+}
