@@ -1,0 +1,206 @@
+/* ===========================
+   RESET E BASE
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #133337;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* ===========================
+   BOTÕES
+=========================== */
+.btn-primary {
+  display: inline-block;
+  background-color: #133337;
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #1d4d53;
+}
+
+.btn-card {
+  display: inline-block;
+  background-color: #af634d;
+  color: #ffffff;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-top: 12px;
+  transition: background-color 0.3s;
+}
+
+.btn-card:hover {
+  background-color: #e17f64;
+}
+
+.btn-header {
+  background-color: #af634d;
+  color: rgb(255, 255, 255);
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-header:hover {
+  background-color: #e17f64;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+header {
+  position: sticky;
+  top: 0;
+  background-color: #133337;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  padding: 14px 0;
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+nav ul li a {
+  font-weight: 500;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #af634d;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+  background-color: #133337;
+  color: #ffffff;
+  padding: 40px 20px;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.footer-logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* NAV DO FOOTER */
+.footer-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-nav a {
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+  color: #af634d;
+}
+
+/* REDES SOCIAIS */
+.footer-social {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-social a {
+  color: #ffffff;
+  font-size: 1.3rem;
+  transition:
+    color 0.3s,
+    transform 0.2s;
+}
+
+.footer-social a:hover {
+  color: #af634d;
+  transform: translateY(-2px);
+}
+
+/* COPYRIGHT */
+.footer-copy {
+  font-size: 0.85rem;
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+@media (max-width: 768px) {
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
