@@ -1,5 +1,5 @@
 /* ===========================
-   RESET E BASE
+   RESET E BASE (IGUAL INDEX)
 =========================== */
 * {
   margin: 0;
@@ -11,6 +11,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #133337;
   line-height: 1.6;
+  background-color: #f7f7f7;
 }
 
 a {
@@ -21,7 +22,7 @@ a {
 img {
   max-width: 100%;
   display: block;
-  border-radius: 8px;
+  border-radius: 12px;
 }
 
 h2 {
@@ -30,53 +31,7 @@ h2 {
 }
 
 /* ===========================
-   BOTÕES
-=========================== */
-.btn-primary {
-  display: inline-block;
-  background-color: #133337;
-  color: #ffffff;
-  padding: 12px 28px;
-  border-radius: 30px;
-  font-weight: bold;
-  margin-top: 20px;
-  transition: background-color 0.3s;
-}
-
-.btn-primary:hover {
-  background-color: #1d4d53;
-}
-
-.btn-card {
-  display: inline-block;
-  background-color: #af634d;
-  color: #ffffff;
-  padding: 8px 20px;
-  border-radius: 20px;
-  font-weight: bold;
-  margin-top: 12px;
-  transition: background-color 0.3s;
-}
-
-.btn-card:hover {
-  background-color: #e17f64;
-}
-
-.btn-header {
-  background-color: #af634d;
-  color: rgb(255, 255, 255);
-  padding: 8px 20px;
-  border-radius: 20px;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.btn-header:hover {
-  background-color: #e17f64;
-}
-
-/* ===========================
-   HEADER
+   HEADER (EXATO)
 =========================== */
 header {
   position: sticky;
@@ -119,8 +74,187 @@ nav ul li a:hover {
   color: #af634d;
 }
 
+/* BOTÃO HEADER */
+.btn-header {
+  background-color: #af634d;
+  color: #ffffff;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-header:hover {
+  background-color: #e17f64;
+}
+
 /* ===========================
-   FOOTER
+   CONTAINER
+=========================== */
+.container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+/* ===========================
+   BLOCOS
+=========================== */
+.bloco {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 80px;
+}
+
+.bloco.baixo {
+  flex-direction: row-reverse;
+}
+
+.texto {
+  flex: 1;
+}
+
+.texto h1 {
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+}
+
+.sub {
+  color: #af634d;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.texto p {
+  margin-bottom: 16px;
+  font-size: 1rem;
+}
+
+.texto ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+/* ===========================
+   IMAGENS / PROFESSORES
+=========================== */
+.imagem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.imagem img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  display: block;
+  margin: 0 auto;
+}
+
+.prof-info {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+
+  background: #133337; /* verde padrão */
+  padding: 8px 16px;
+  border-radius: 20px;
+
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* ===========================
+   PROGRAMA (DESTAQUE VERDE)
+=========================== */
+.programa {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.programa-box {
+  background: #133337;
+  color: #ffffff;
+
+  padding: 28px;
+  border-radius: 12px;
+  margin-top: 25px;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+.programa-box p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.programa-box strong {
+  color: #e17f64;
+}
+
+/* ===========================
+   PREÇO (VERDE)
+=========================== */
+.preco {
+  text-align: center;
+}
+
+.preco-box {
+  background: #133337;
+  color: #ffffff;
+
+  padding: 40px;
+  border-radius: 14px;
+  margin-top: 20px;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.avista {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+.parcelado {
+  margin: 12px 0;
+  opacity: 0.9;
+}
+
+/* ===========================
+   BOTÃO COMPRA (CARMIM)
+=========================== */
+.btn-comprar {
+  display: inline-block;
+  background: #AF634D;
+  color: white;
+
+  padding: 16px 36px;
+  border-radius: 30px;
+  font-weight: bold;
+
+  margin-top: 15px;
+  transition: 0.3s;
+}
+
+.btn-comprar:hover {
+  background: #e17f64;
+  transform: scale(1.05);
+}
+
+/* ===========================
+   FOOTER (EXATO)
 =========================== */
 footer {
   background-color: #133337;
@@ -147,7 +281,6 @@ footer {
   color: #ffffff;
 }
 
-/* NAV DO FOOTER */
 .footer-nav {
   display: flex;
   gap: 20px;
@@ -162,7 +295,6 @@ footer {
   color: #af634d;
 }
 
-/* REDES SOCIAIS */
 .footer-social {
   display: flex;
   gap: 16px;
@@ -171,9 +303,7 @@ footer {
 .footer-social a {
   color: #ffffff;
   font-size: 1.3rem;
-  transition:
-    color 0.3s,
-    transform 0.2s;
+  transition: color 0.3s, transform 0.2s;
 }
 
 .footer-social a:hover {
@@ -181,7 +311,6 @@ footer {
   transform: translateY(-2px);
 }
 
-/* COPYRIGHT */
 .footer-copy {
   font-size: 0.85rem;
   color: #ffffff;
@@ -194,6 +323,11 @@ footer {
    RESPONSIVO
 =========================== */
 @media (max-width: 768px) {
+  .bloco {
+    flex-direction: column;
+    text-align: center;
+  }
+
   .footer-inner {
     flex-direction: column;
     text-align: center;
