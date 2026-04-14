@@ -1,39 +1,4 @@
 /* ===========================
-   RESET LOCAL (PLANO)
-=========================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* ===========================
-   BASE
-=========================== */
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #133337;
-  line-height: 1.6;
-  background-color: #f7f7f7;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-  border-radius: 12px;
-}
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-/* ===========================
    CONTAINER
 =========================== */
 .container {
@@ -43,64 +8,7 @@ h2 {
 }
 
 /* ===========================
-   HEADER (SOMENTE ESPECÍFICO)
-=========================== */
-header {
-  position: sticky;
-  top: 0;
-  background-color: #133337;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  z-index: 100;
-  padding: 14px 0;
-}
-
-.header-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.logo a {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #ffffff;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 24px;
-}
-
-nav ul li a {
-  font-weight: 500;
-  color: #ffffff;
-  transition: color 0.3s;
-}
-
-nav ul li a:hover {
-  color: #af634d;
-}
-
-.btn-header {
-  background-color: #af634d;
-  color: #ffffff;
-  padding: 8px 20px;
-  border-radius: 20px;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.btn-header:hover {
-  background-color: #e17f64;
-}
-
-/* ===========================
-   BLOCOS
+   BLOCO PRINCIPAL
 =========================== */
 .bloco {
   display: flex;
@@ -109,10 +17,9 @@ nav ul li a:hover {
   margin-bottom: 80px;
 }
 
-.bloco.baixo {
-  flex-direction: row;
-}
-
+/* ===========================
+   TEXTO
+=========================== */
 .texto {
   flex: 1;
 }
@@ -130,25 +37,25 @@ nav ul li a:hover {
 
 .texto p {
   margin-bottom: 16px;
-  font-size: 1rem;
 }
 
 /* ===========================
-   LISTA MELHORADA
+   LISTAS (UNIFICADAS)
 =========================== */
-.texto ul {
+.texto ul,
+.lista-beneficios {
   list-style: none;
   margin-top: 15px;
-  padding-left: 0;
+  padding: 0;
 }
 
-.texto ul li {
+.texto ul li,
+.lista-beneficios li {
   background: #133337;
-  color: #ffffff;
+  color: #fff;
 
   padding: 10px 14px;
   margin-bottom: 10px;
-
   border-radius: 10px;
 
   display: flex;
@@ -156,31 +63,37 @@ nav ul li a:hover {
   gap: 10px;
 
   font-weight: 500;
-  transition:
-    transform 0.2s,
-    background-color 0.3s;
+  cursor: default;
+
+  transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
-.texto ul li:hover {
+.texto ul li:hover,
+.lista-beneficios li:hover {
   transform: translateX(5px);
   background: #1d4d53;
 }
 
-.texto ul li::before {
+.texto ul li::before,
+.lista-beneficios li::before {
   content: "✔";
   color: #af634d;
   font-weight: bold;
 }
 
+/* impede seleção (mantido comportamento anterior) */
+.lista-beneficios li {
+  user-select: none;
+}
+
 /* ===========================
-   IMAGENS / PROFESSORES
+   IMAGEM
 =========================== */
 .imagem {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
 }
 
@@ -195,7 +108,7 @@ nav ul li a:hover {
   margin-top: 12px;
   font-size: 0.95rem;
   font-weight: 600;
-  color: #ffffff;
+  color: #fff;
   background: #133337;
   padding: 8px 16px;
   border-radius: 20px;
@@ -211,7 +124,7 @@ nav ul li a:hover {
 
 .programa-box {
   background: #133337;
-  color: #ffffff;
+  color: #fff;
   padding: 28px;
   border-radius: 12px;
   margin-top: 25px;
@@ -231,11 +144,18 @@ nav ul li a:hover {
 
 .preco-box {
   background: #133337;
-  color: #ffffff;
+  color: #fff;
   padding: 40px;
   border-radius: 14px;
   margin-top: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.preco-antigo {
+  text-decoration: line-through;
+  opacity: 0.7;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
 }
 
 .avista {
@@ -249,68 +169,29 @@ nav ul li a:hover {
 }
 
 /* ===========================
-   BOTÃO COMPRA
+   BOTÃO (PADRÃO UNIFICADO)
 =========================== */
 .btn-comprar {
   display: inline-block;
   background: #af634d;
-  color: #ffffff;
+  color: #fff;
   padding: 16px 36px;
   border-radius: 30px;
   font-weight: bold;
   margin-top: 15px;
-  transition: 0.3s;
+  text-decoration: none;
+
+  transition: background-color 0.3s ease, filter 0.25s ease,
+    transform 0.12s ease;
 }
 
 .btn-comprar:hover {
   background: #e17f64;
-  transform: scale(1.05);
+  filter: brightness(1.05);
 }
 
-/* ===========================
-   LISTA - NÃO SELECIONÁVEL
-=========================== */
-.lista-beneficios {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 15px;
-}
-
-.lista-beneficios li {
-  background: #133337;
-  color: #ffffff;
-
-  padding: 10px 14px;
-  margin-bottom: 10px;
-
-  border-radius: 10px;
-
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  font-weight: 500;
-
-  cursor: default;
-  user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-
-  transition:
-    transform 0.2s,
-    background-color 0.3s;
-}
-
-.lista-beneficios li:hover {
-  transform: translateX(5px);
-  background: #1d4d53;
-}
-
-/* ícone de check */
-.lista-beneficios li::before {
-  content: "✔";
-  color: #af634d;
-  font-weight: bold;
+.btn-comprar:active {
+  transform: scale(0.97);
 }
 
 /* ===========================
@@ -320,10 +201,6 @@ nav ul li a:hover {
   .bloco {
     flex-direction: column;
     text-align: center;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
+    gap: 30px;
   }
 }

@@ -1,6 +1,7 @@
 xxxx
 
 verificar se código está compativel com o pdf do que o flavio pediu ou se falta
+sem java script
 
 https://devtools.com.br/gerador-boleto/
 

@@ -1,60 +1,141 @@
-/* ÁREA */
+/* ===========================
+   ÁREA PRINCIPAL
+=========================== */
 .compra {
-  flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
   padding: 60px 20px;
 }
 
-/* BOX MAIOR */
+/* ===========================
+   BOX PRINCIPAL
+=========================== */
 .compra-box {
-  background: #ffffff;
+  width: 1000px;
+  max-width: 95%;
+  background: #fff;
   padding: 40px;
-  width: 500px;
   border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
 }
 
-/* TÍTULOS */
-h1 {
-  font-size: 28px;
+/* ===========================
+   LADO ESQUERDO
+=========================== */
+.lado-esquerdo {
+  flex: 1;
+  text-align: center;
+}
+
+.lado-esquerdo h1 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+/* preços */
+.preco-antigo {
+  text-decoration: line-through;
+  opacity: 0.7;
+  margin-bottom: 5px;
 }
 
 .preco {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
+}
+
+.parcelado {
+  margin-bottom: 20px;
+  opacity: 0.85;
+}
+
+/* ===========================
+   IMAGEM
+=========================== */
+.img-grande {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+/* leve interação visual */
+.hover-up {
+  transition: transform 0.25s ease;
+}
+
+.hover-up:hover {
+  transform: scale(1.02);
+}
+
+/* ===========================
+   LADO DIREITO
+=========================== */
+.lado-direito {
+  flex: 1;
+}
+
+.bloco {
   margin-bottom: 25px;
 }
 
-/* ESCONDE RADIO */
+/* ===========================
+   EMAIL
+=========================== */
+.input-email {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.input-email:focus {
+  border-color: #133337;
+}
+
+.info-email {
+  font-size: 14px;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* ===========================
+   OPÇÕES DE PAGAMENTO
+=========================== */
 input[type="radio"] {
   display: none;
 }
 
-/* BOTÕES */
 .opcoes {
   display: flex;
-  gap: 15px;
-  margin-bottom: 25px;
+  gap: 10px;
+  margin: 15px 0;
 }
 
 .opcoes label {
   flex: 1;
   text-align: center;
-  padding: 14px;
+  padding: 12px;
   border: 2px solid #133337;
   border-radius: 10px;
   cursor: pointer;
-  transition: 0.3s;
   font-weight: 600;
+
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.opcoes label i {
-  margin-right: 6px;
+.opcoes label:hover {
+  transform: translateY(-2px);
 }
 
-/* SELECIONADO */
+/* ativo */
 #pix:checked ~ .opcoes label[for="pix"],
 #boleto:checked ~ .opcoes label[for="boleto"],
 #cartao:checked ~ .opcoes label[for="cartao"] {
@@ -62,76 +143,99 @@ input[type="radio"] {
   color: #fff;
 }
 
-/* EMAIL */
-.input-email {
-  width: 100%;
-  padding: 14px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 15px;
-  margin-bottom: 20px;
-}
-
-/* CONTEÚDO */
+/* ===========================
+   CONTEÚDOS
+=========================== */
 .conteudo {
   display: none;
-  margin-top: 15px;
-  padding: 20px;
-  border-radius: 12px;
   background: #f9f9f9;
+  padding: 15px;
+  border-radius: 12px;
 }
 
-/* MOSTRAR */
+/* PIX */
 #pix:checked ~ .conteudos .pix {
   display: block;
   text-align: center;
 }
 
+.qr {
+  width: 180px;
+  margin: 10px auto;
+  border-radius: 12px;
+}
+
+.conteudo.pix .info {
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+/* BOLETO */
 #boleto:checked ~ .conteudos .boleto {
   display: block;
-}
-
-.boleto {
   text-align: center;
 }
 
-.boleto .btn-pagamento {
-  display: block;
-  margin: 20px auto 0 auto;
-  width: 200px;
+.info-boleto {
+  font-size: 13px;
+  color: #666;
+  margin: 10px 0 15px;
+  line-height: 1.4;
 }
 
+/* CARTÃO */
 #cartao:checked ~ .conteudos .cartao {
   display: block;
-  text-align: center;
 }
 
-/* QR */
-.qr {
-  width: 220px;
-  margin: 20px auto;
-  display: block;
-  border: 8px solid #fff;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+/* ===========================
+   BOTÃO PAGAMENTO (integrado com style.css)
+=========================== */
+.btn-pagamento {
+  display: inline-block;
+  background: #af634d;
+  color: #fff;
+  padding: 12px;
   border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+
+  transition: background-color 0.3s ease, filter 0.25s ease,
+    transform 0.12s ease;
 }
 
-/* FORM */
+.btn-pagamento:hover {
+  background: #e17f64;
+  filter: brightness(1.05);
+}
+
+.btn-pagamento:active {
+  transform: scale(0.97);
+}
+
+/* ===========================
+   FORM CARTÃO
+=========================== */
 form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  margin-top: 15px;
+  gap: 10px;
 }
 
 form input {
-  padding: 14px;
+  padding: 12px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s ease;
 }
 
-/* LINHA CERTA */
+form input:focus {
+  border-color: #133337;
+}
+
 .linha {
   display: flex;
   gap: 10px;
@@ -141,33 +245,44 @@ form input {
   width: 50%;
 }
 
-/* BOTÃO */
-.btn-pagamento {
-  display: inline-block;
-  text-align: center;
-  padding: 14px;
-  background: #af634d;
-  color: #fff;
-  border-radius: 10px;
-  font-weight: bold;
-  transition: 0.3s;
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-
-.btn-pagamento:hover {
-  background: #e17f64;
-}
-
-.btn-pagamento:active {
-  transform: scale(0.98);
-}
-
-/* INFO */
-.info {
-  font-size: 14px;
+/* ===========================
+   SEGURANÇA
+=========================== */
+.seguranca-pagamento {
+  margin-top: 15px;
+  padding: 10px 12px;
+  font-size: 13px;
   color: #555;
-  margin-top: 10px;
   text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.seguranca-pagamento i {
+  color: #133337;
+}
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+@media (max-width: 900px) {
+  .compra-box {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .img-grande {
+    max-width: 100%;
+  }
+
+  .linha {
+    flex-direction: column;
+  }
+
+  .linha input {
+    width: 100%;
+  }
 }

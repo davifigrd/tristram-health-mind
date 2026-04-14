@@ -22,7 +22,6 @@
   </head>
 
   <body>
-    <!-- HEADER -->
     <header>
       <div class="header-inner">
         <div class="logo">
@@ -38,118 +37,148 @@
           </ul>
         </nav>
 
-        <a href="../index.html#ebook" class="btn-header">
-          E-book Gratuito
-        </a>
+        <a href="../index.html#ebook" class="btn-header">E-book Gratuito</a>
       </div>
     </header>
 
-    <!-- CONTEÚDO -->
     <main class="compra">
       <div class="compra-box">
-        <h1>Plano Iniciante</h1>
-        <p class="preco">R$ 29,90</p>
+        <!-- ESQUERDA -->
+        <div class="lado-esquerdo">
+          <h1>Plano Iniciante</h1>
 
-        <!-- EMAIL -->
-        <h2>Seu e-mail</h2>
-        <input
-          type="email"
-          placeholder="Digite seu e-mail"
-          class="input-email"
-          required
-        />
+          <p class="preco-antigo">De R$ 320,00 por</p>
+          <p class="preco">R$ 97,90</p>
+          <p class="parcelado">ou 12x de R$ 8,15 sem juros</p>
 
-        <h2>Forma de pagamento</h2>
-
-        <!-- INPUTS -->
-        <input type="radio" name="pagamento" id="pix" checked />
-        <input type="radio" name="pagamento" id="boleto" />
-        <input type="radio" name="pagamento" id="cartao" />
-
-        <!-- BOTÕES -->
-        <div class="opcoes">
-          <label for="pix"><i class="fa-solid fa-qrcode"></i> PIX</label>
-          <label for="boleto"><i class="fa-solid fa-barcode"></i> Boleto</label>
-          <label for="cartao">
-            <i class="fa-solid fa-credit-card"></i> Cartão
-          </label>
+          <a href="https://example.com" target="_blank">
+            <img
+              src="../../img/iniciante.png"
+              alt="Plano Iniciante"
+              class="img-grande hover-up"
+            />
+          </a>
         </div>
 
-        <!-- CONTEÚDOS -->
-        <div class="conteudos">
-          <!-- PIX -->
-          <div class="conteudo pix">
-            <h3>Pague com PIX</h3>
-            <p>Escaneie o QR Code:</p>
-            <img src="../../img/qr_code.png" class="qr" />
-            <p class="info">Chave pix: pagamento@tristram.com</p>
+        <!-- DIREITA -->
+        <div class="lado-direito">
+          <div class="bloco">
+            <h2>Seu e-mail</h2>
+
+            <p class="info-email">
+              Enviaremos o conteúdo após confirmação do pagamento 📩
+            </p>
+
+            <input
+              type="email"
+              placeholder="Digite seu e-mail"
+              class="input-email"
+              form="form-cartao"
+              required
+            />
           </div>
 
-          <!-- BOLETO -->
-          <div class="conteudo boleto">
-            <h3>Pagamento via Boleto</h3>
-            <p>Você será redirecionado para gerar seu boleto:</p>
+          <div class="bloco">
+            <h2>Forma de pagamento</h2>
 
-            <a
-              href="../../img/boletos/boleto_iniciante.pdf"
-              download="boleto_iniciante.pdf"
-              class="btn-pagamento"
-            >
-              Gerar boleto
-            </a>
-          </div>
+            <input type="radio" name="pagamento" id="pix" checked />
+            <input type="radio" name="pagamento" id="boleto" />
+            <input type="radio" name="pagamento" id="cartao" />
 
-          <!-- CARTÃO -->
-          <div class="conteudo cartao">
-            <h3>Pagamento com Cartão</h3>
+            <div class="opcoes">
+              <label for="pix"><i class="fa-solid fa-qrcode"></i> PIX</label>
+              <label for="boleto"
+                ><i class="fa-solid fa-barcode"></i> Boleto</label
+              >
+              <label for="cartao"
+                ><i class="fa-solid fa-credit-card"></i> Cartão</label
+              >
+            </div>
 
-            <form action="../sucesso/sucesso_compra.html">
-              <input
-                type="text"
-                placeholder="Número do cartão"
-                inputmode="numeric"
-                pattern="[0-9]{13,16}"
-                maxlength="16"
-                required
-              />
-
-              <input
-                type="text"
-                placeholder="Nome no cartão"
-                pattern="[A-Za-zÀ-ÿ\s]+"
-                required
-              />
-
-              <div class="linha">
-                <input
-                  type="text"
-                  placeholder="MMAA"
-                  inputmode="numeric"
-                  pattern="(0[1-9]|1[0-2])[0-9]{2}"
-                  maxlength="4"
-                  required
-                />
-
-                <input
-                  type="text"
-                  placeholder="CVV"
-                  inputmode="numeric"
-                  pattern="[0-9]{3,4}"
-                  maxlength="4"
-                  required
-                />
+            <div class="conteudos">
+              <!-- PIX -->
+              <div class="conteudo pix pix-box">
+                <h3>Pague com PIX</h3>
+                <img src="../../img/qr_code.png" class="qr" />
+                <p class="info">Chave PIX: pagamento@tristram.com</p>
               </div>
 
-              <button type="submit" class="btn-pagamento">
-                Finalizar pagamento
-              </button>
-            </form>
+              <!-- BOLETO -->
+              <div class="conteudo boleto">
+                <h3>Pagamento via Boleto</h3>
+
+                <p class="info-boleto">
+                  O boleto pode levar até 3 dias úteis para compensação após o
+                  pagamento.
+                </p>
+
+                <a
+                  href="../../img/boletos/boleto_iniciante.pdf"
+                  download
+                  class="btn-pagamento"
+                >
+                  Gerar boleto
+                </a>
+              </div>
+
+              <!-- CARTÃO -->
+              <div class="conteudo cartao">
+                <h3>Cartão</h3>
+
+                <form id="form-cartao" action="../sucesso/sucesso_compra.html">
+                  <input
+                    type="text"
+                    placeholder="Número do cartão"
+                    inputmode="numeric"
+                    maxlength="19"
+                    minlength="15"
+                    pattern="[0-9]{15,19}"
+                    required
+                  />
+
+                  <input
+                    type="text"
+                    placeholder="Nome no cartão"
+                    pattern="[A-Za-zÀ-ÿ\s]{3,}"
+                    required
+                  />
+
+                  <div class="linha">
+                    <input
+                      type="text"
+                      placeholder="MMAA"
+                      maxlength="4"
+                      minlength="4"
+                      pattern="[0-9]{4}"
+                      inputmode="numeric"
+                      required
+                    />
+
+                    <input
+                      type="text"
+                      placeholder="CVV"
+                      maxlength="4"
+                      minlength="3"
+                      pattern="[0-9]{3,4}"
+                      inputmode="numeric"
+                      required
+                    />
+                  </div>
+
+                  <button class="btn-pagamento" type="submit">
+                    Finalizar pagamento
+                  </button>
+                </form>
+              </div>
+            </div>
           </div>
+          <div class="seguranca-pagamento">
+            <i class="fa-solid fa-lock"></i>
+            Pagamento 100% seguro • Dados protegidos com criptografia SSL
         </div>
       </div>
     </main>
 
-    <!-- FOOTER -->
     <footer>
       <div class="footer-inner">
         <div class="footer-logo">
@@ -166,9 +195,15 @@
         </nav>
 
         <div class="footer-social">
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com/" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/553240028922" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="https://www.facebook.com/" target="_blank">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
         </div>
 
         <p class="footer-copy">
