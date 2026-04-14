@@ -1,5 +1,5 @@
 /* ===========================
-   RESET E BASE (IGUAL INDEX)
+   RESET LOCAL (PLANO)
 =========================== */
 * {
   margin: 0;
@@ -7,6 +7,9 @@
   box-sizing: border-box;
 }
 
+/* ===========================
+   BASE
+=========================== */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #133337;
@@ -31,7 +34,16 @@ h2 {
 }
 
 /* ===========================
-   HEADER (EXATO)
+   CONTAINER
+=========================== */
+.container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+/* ===========================
+   HEADER (SOMENTE ESPECÍFICO)
 =========================== */
 header {
   position: sticky;
@@ -74,7 +86,6 @@ nav ul li a:hover {
   color: #af634d;
 }
 
-/* BOTÃO HEADER */
 .btn-header {
   background-color: #af634d;
   color: #ffffff;
@@ -86,15 +97,6 @@ nav ul li a:hover {
 
 .btn-header:hover {
   background-color: #e17f64;
-}
-
-/* ===========================
-   CONTAINER
-=========================== */
-.container {
-  max-width: 900px;
-  margin: 60px auto;
-  padding: 0 20px;
 }
 
 /* ===========================
@@ -131,9 +133,43 @@ nav ul li a:hover {
   font-size: 1rem;
 }
 
+/* ===========================
+   LISTA MELHORADA
+=========================== */
 .texto ul {
+  list-style: none;
   margin-top: 15px;
-  padding-left: 20px;
+  padding-left: 0;
+}
+
+.texto ul li {
+  background: #133337;
+  color: #ffffff;
+
+  padding: 10px 14px;
+  margin-bottom: 10px;
+
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-weight: 500;
+  transition:
+    transform 0.2s,
+    background-color 0.3s;
+}
+
+.texto ul li:hover {
+  transform: translateX(5px);
+  background: #1d4d53;
+}
+
+.texto ul li::before {
+  content: "✔";
+  color: #af634d;
+  font-weight: bold;
 }
 
 /* ===========================
@@ -152,9 +188,7 @@ nav ul li a:hover {
   width: 100%;
   max-width: 320px;
   border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  display: block;
-  margin: 0 auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
 .prof-info {
@@ -162,21 +196,13 @@ nav ul li a:hover {
   font-size: 0.95rem;
   font-weight: 600;
   color: #ffffff;
-
-  background: #133337; /* verde padrão */
+  background: #133337;
   padding: 8px 16px;
   border-radius: 20px;
-
-  display: block;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-
-  transition: background-color 0.3s, transform 0.2s;
 }
 
 /* ===========================
-   PROGRAMA (DESTAQUE VERDE)
+   PROGRAMA
 =========================== */
 .programa {
   margin-bottom: 60px;
@@ -186,18 +212,10 @@ nav ul li a:hover {
 .programa-box {
   background: #133337;
   color: #ffffff;
-
   padding: 28px;
   border-radius: 12px;
   margin-top: 25px;
-
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-  text-align: center;
-}
-
-.programa-box p {
-  margin-bottom: 10px;
-  font-size: 1rem;
 }
 
 .programa-box strong {
@@ -205,7 +223,7 @@ nav ul li a:hover {
 }
 
 /* ===========================
-   PREÇO (VERDE)
+   PREÇO
 =========================== */
 .preco {
   text-align: center;
@@ -214,12 +232,10 @@ nav ul li a:hover {
 .preco-box {
   background: #133337;
   color: #ffffff;
-
   padding: 40px;
   border-radius: 14px;
   margin-top: 20px;
-
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .avista {
@@ -233,17 +249,15 @@ nav ul li a:hover {
 }
 
 /* ===========================
-   BOTÃO COMPRA (CARMIM)
+   BOTÃO COMPRA
 =========================== */
 .btn-comprar {
   display: inline-block;
-  background: #AF634D;
-  color: white;
-
+  background: #af634d;
+  color: #ffffff;
   padding: 16px 36px;
   border-radius: 30px;
   font-weight: bold;
-
   margin-top: 15px;
   transition: 0.3s;
 }
@@ -254,69 +268,49 @@ nav ul li a:hover {
 }
 
 /* ===========================
-   FOOTER (EXATO)
+   LISTA - NÃO SELECIONÁVEL
 =========================== */
-footer {
-  background-color: #133337;
-  color: #ffffff;
-  padding: 40px 20px;
+.lista-beneficios {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 15px;
 }
 
-.footer-inner {
-  max-width: 1100px;
-  margin: 0 auto;
+.lista-beneficios li {
+  background: #133337;
+  color: #ffffff;
+
+  padding: 10px 14px;
+  margin-bottom: 10px;
+
+  border-radius: 10px;
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+  gap: 10px;
 
-  flex-wrap: wrap;
-  text-align: left;
+  font-weight: 500;
+
+  cursor: default;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+
+  transition:
+    transform 0.2s,
+    background-color 0.3s;
 }
 
-.footer-logo {
-  font-size: 1.4rem;
+.lista-beneficios li:hover {
+  transform: translateX(5px);
+  background: #1d4d53;
+}
+
+/* ícone de check */
+.lista-beneficios li::before {
+  content: "✔";
+  color: #af634d;
   font-weight: bold;
-  color: #ffffff;
-}
-
-.footer-nav {
-  display: flex;
-  gap: 20px;
-}
-
-.footer-nav a {
-  color: #ffffff;
-  transition: color 0.3s;
-}
-
-.footer-nav a:hover {
-  color: #af634d;
-}
-
-.footer-social {
-  display: flex;
-  gap: 16px;
-}
-
-.footer-social a {
-  color: #ffffff;
-  font-size: 1.3rem;
-  transition: color 0.3s, transform 0.2s;
-}
-
-.footer-social a:hover {
-  color: #af634d;
-  transform: translateY(-2px);
-}
-
-.footer-copy {
-  font-size: 0.85rem;
-  color: #ffffff;
-  width: 100%;
-  text-align: center;
-  margin-top: 20px;
 }
 
 /* ===========================
@@ -328,13 +322,8 @@ footer {
     text-align: center;
   }
 
-  .footer-inner {
+  nav ul {
     flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-nav {
-    flex-wrap: wrap;
-    justify-content: center;
+    gap: 10px;
   }
 }

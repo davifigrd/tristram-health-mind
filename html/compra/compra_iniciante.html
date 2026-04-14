@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compra Plano Iniciante - Tristram Health & Mind</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../../img/icone.ico"
+    />
+
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/compra.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="header-inner">
+        <div class="logo">
+          <a href="../index.html">Tristram Health & Mind</a>
+        </div>
+
+        <nav>
+          <ul>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../index.html#programas">Programas</a></li>
+            <li><a href="../index.html#sobre">Sobre</a></li>
+            <li><a href="../contato.html">Contato</a></li>
+          </ul>
+        </nav>
+
+        <a href="../index.html#ebook" class="btn-header">E-book Gratuito</a>
+      </div>
+    </header>
+
+    <!-- CONTEÚDO -->
+    <main class="container checkout">
+      <!-- RESUMO -->
+      <section class="resumo">
+        <h2>Resumo da compra</h2>
+
+        <div class="programa-box">
+          <h3>Plano Iniciante</h3>
+          <p>Yoga para Iniciantes</p>
+
+          <div class="preco-destaque">
+            <span class="avista">R$ 97,00</span>
+            <span class="parcelado">ou 10x de R$ 9,70</span>
+          </div>
+        </div>
+
+        <ul class="beneficios">
+          <li><i class="fa-solid fa-check"></i> Acesso imediato</li>
+          <li><i class="fa-solid fa-check"></i> 4 semanas de acompanhamento</li>
+          <li><i class="fa-solid fa-check"></i> IA com correção de postura</li>
+          <li><i class="fa-solid fa-check"></i> Suporte especializado</li>
+        </ul>
+      </section>
+
+      <!-- FORMULÁRIO -->
+      <section class="formulario">
+        <h2>Pagamento</h2>
+
+        <form action="sucesso_compra.html" method="get">
+          <!-- PAGAMENTO -->
+          <div class="pagamento">
+            <h3>Forma de pagamento</h3>
+
+            <label class="opcao">
+              <input type="radio" name="pagamento" value="cartao" checked />
+              Cartão de crédito
+            </label>
+
+            <label class="opcao">
+              <input type="radio" name="pagamento" value="pix" />
+              PIX
+            </label>
+
+            <label class="opcao">
+              <input type="radio" name="pagamento" value="boleto" />
+              Boleto
+            </label>
+          </div>
+
+          <!-- CARTÃO -->
+          <div class="box">
+            <label>Nome completo</label>
+            <input type="text" name="nome" required />
+
+            <label>E-mail</label>
+            <input type="email" name="email" required />
+
+            <label>Número do cartão</label>
+            <input type="text" name="cartao" required />
+
+            <div class="linha">
+              <div>
+                <label>Validade</label>
+                <input type="text" name="validade" required />
+              </div>
+
+              <div>
+                <label>CVV</label>
+                <input type="text" name="cvv" required />
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-comprar">
+            <i class="fa-solid fa-lock"></i>
+            Confirmar compra segura
+          </button>
+        </form>
+
+        <p class="seguro">
+          <i class="fa-solid fa-shield-halved"></i>
+          Pagamento 100% seguro e criptografado
+        </p>
+      </section>
+    </main>
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <a href="../html/index.html">Tristram Health & Mind</a>
+        </div>
+
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../index.html#programas">Programas</a></li>
+            <li><a href="../index.html#sobre">Sobre</a></li>
+            <li><a href="../contato.html">Contato</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-social">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+
+        <p class="footer-copy">© 2025 Tristram Health & Mind</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -11,6 +11,10 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #133337;
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100%;
 }
 
 a {
@@ -30,7 +34,7 @@ h2 {
 }
 
 /* ===========================
-   BOTÕES
+   BOTÕES (GERAIS)
 =========================== */
 .btn-primary {
   display: inline-block;
@@ -76,7 +80,7 @@ h2 {
 }
 
 /* ===========================
-   HEADER
+   HEADER / NAVEGAÇÃO
 =========================== */
 header {
   position: sticky;
@@ -120,7 +124,7 @@ nav ul li a:hover {
 }
 
 /* ===========================
-   HERO
+   HERO (APRESENTAÇÃO)
 =========================== */
 .hero {
   max-width: 1100px;
@@ -164,7 +168,7 @@ nav ul li a:hover {
 }
 
 /* ===========================
-   PROGRAMAS
+   PROGRAMAS (CARDS)
 =========================== */
 .programas {
   background-color: #133337;
@@ -226,7 +230,7 @@ nav ul li a:hover {
 }
 
 /* ===========================
-   SOBRE
+   SOBRE (INSTITUCIONAL)
 =========================== */
 .sobre {
   max-width: 1100px;
@@ -386,114 +390,92 @@ nav ul li a:hover {
 }
 
 /* ===========================
-   CONTATO
+   SUCESSO (CONTATO / E-BOOK / COMPRA)
 =========================== */
-.contato {
-  padding: 60px 20px;
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.contato h2 {
-  color: #133337;
-}
-
-.contato p {
-  color: #133337;
-  margin-bottom: 28px;
-}
-
-.form-contato {
+.sucesso {
+  flex: 1;
   display: flex;
-  flex-direction: column;
-  gap: 14px;
-  text-align: left;
-}
-
-.form-contato input,
-.form-contato textarea {
-  padding: 12px 16px;
-  border: 1px solid #133337;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-family: inherit;
-  outline: none;
-}
-
-.form-contato input:focus,
-.form-contato textarea:focus {
-  border-color: #133337;
-}
-
-.form-contato button {
-  padding: 14px;
-  background-color: #133337;
-  color: #ffffff;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.form-contato button:hover {
-  background-color: #1d4d53;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 /* ===========================
-   FOOTER
+   REDES SOCIAIS
+=========================== */
+.redes-sociais a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1rem;
+  color: #133337;
+  transition: color 0.3s;
+}
+
+.redes-sociais a i {
+  font-size: 1.2rem;
+}
+
+.redes-sociais a:hover {
+  color: #af634d;
+}
+
+/* ===========================
+   FOOTER (RODAPÉ)
 =========================== */
 footer {
   background-color: #133337;
   color: #ffffff;
-  padding: 40px 20px;
+  padding: 14px 0;
 }
 
 .footer-inner {
   max-width: 1100px;
   margin: 0 auto;
+  padding: 0 20px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-
   flex-wrap: wrap;
-  text-align: left;
 }
 
-.footer-logo {
-  font-size: 1.4rem;
+.footer-logo a {
+  font-size: 1.5rem;
   font-weight: bold;
   color: #ffffff;
 }
 
-/* NAV DO FOOTER */
-.footer-nav {
+.footer-nav ul {
+  list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
 }
 
-.footer-nav a {
+.footer-nav ul li a {
+  font-weight: 500;
   color: #ffffff;
   transition: color 0.3s;
 }
 
-.footer-nav a:hover {
+.footer-nav ul li a:hover {
   color: #af634d;
 }
 
-/* REDES SOCIAIS */
 .footer-social {
   display: flex;
   gap: 16px;
+  font-size: 1.3rem;
 }
 
 .footer-social a {
   color: #ffffff;
-  font-size: 1.3rem;
   transition:
     color 0.3s,
     transform 0.2s;
@@ -504,26 +486,36 @@ footer {
   transform: translateY(-2px);
 }
 
-/* COPYRIGHT */
 .footer-copy {
-  font-size: 0.85rem;
-  color: #ffffff;
   width: 100%;
   text-align: center;
-  margin-top: 20px;
+  font-size: 0.85rem;
+  margin-top: 12px;
+  color: #ffffff;
 }
 
 /* ===========================
    RESPONSIVO
 =========================== */
 @media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
   .footer-inner {
     flex-direction: column;
     text-align: center;
   }
 
-  .footer-nav {
-    flex-wrap: wrap;
-    justify-content: center;
+  .footer-nav ul {
+    display: flex;
+    gap: 24px;
+    align-items: center;
   }
 }
