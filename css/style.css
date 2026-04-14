@@ -44,7 +44,10 @@ h2 {
   border-radius: 30px;
   font-weight: bold;
   margin-top: 20px;
-transition: transform 0.15s ease, filter 0.3s ease, background-color 0.3s ease;
+  transition:
+    transform 0.15s ease,
+    filter 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .btn-primary:hover {
@@ -59,7 +62,10 @@ transition: transform 0.15s ease, filter 0.3s ease, background-color 0.3s ease;
   border-radius: 20px;
   font-weight: bold;
   margin-top: 12px;
-transition: transform 0.15s ease, filter 0.3s ease, background-color 0.3s ease;
+  transition:
+    transform 0.15s ease,
+    filter 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .btn-card:hover {
@@ -72,7 +78,10 @@ transition: transform 0.15s ease, filter 0.3s ease, background-color 0.3s ease;
   padding: 8px 20px;
   border-radius: 20px;
   font-weight: bold;
-transition: transform 0.15s ease, filter 0.3s ease, background-color 0.3s ease;
+  transition:
+    transform 0.15s ease,
+    filter 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .btn-header:hover {
@@ -82,7 +91,10 @@ transition: transform 0.15s ease, filter 0.3s ease, background-color 0.3s ease;
 .btn-header,
 .btn-pagamento,
 .form-ebook button {
-  transition: transform 0.15s ease, filter 0.3s ease, background-color 0.3s ease;
+  transition:
+    transform 0.15s ease,
+    filter 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .btn-primary:active,

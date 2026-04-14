@@ -128,7 +128,9 @@ input[type="radio"] {
   cursor: pointer;
   font-weight: 600;
 
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .opcoes label:hover {
@@ -202,7 +204,9 @@ input[type="radio"] {
   border: none;
   cursor: pointer;
 
-  transition: background-color 0.3s ease, filter 0.25s ease,
+  transition:
+    background-color 0.3s ease,
+    filter 0.25s ease,
     transform 0.12s ease;
 }
 
@@ -263,6 +267,43 @@ form input:focus {
 
 .seguranca-pagamento i {
   color: #133337;
+}
+
+/* ===========================
+   AJUSTE VISUAL DO LADO ESQUERDO
+=========================== */
+
+.lado-esquerdo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* garante alinhamento consistente do conteúdo */
+.lado-esquerdo h1,
+.lado-esquerdo p {
+  width: 100%;
+}
+
+/* imagem mais centralizada e "encaixada" no bloco */
+.lado-esquerdo a {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* caso a imagem não esteja dentro de <a>, ainda funciona */
+.img-grande {
+  display: block;
+  margin: 25px auto 0 auto;
+}
+
+/* melhora leve espaçamento entre preço e imagem */
+.preco-antigo,
+.preco,
+.parcelado {
+  text-align: center;
 }
 
 /* ===========================
