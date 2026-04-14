@@ -1,220 +1,173 @@
-/* ===========================
-   LAYOUT GERAL
-=========================== */
-
-.container.checkout {
-  max-width: 1100px;
-  margin: 60px auto;
-  padding: 0 20px;
-
-  display: flex;
-  gap: 50px;
-  align-items: flex-start;
-}
-
-/* ===========================
-   CARDS
-=========================== */
-
-.resumo,
-.formulario {
+/* ÁREA */
+.compra {
   flex: 1;
-  background: #fff;
-  border-radius: 14px;
-  padding: 30px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
 }
 
-/* ===========================
-   TÍTULOS
-=========================== */
-
-.resumo h2,
-.formulario h2 {
-  margin-bottom: 20px;
-  color: #133337;
-  font-size: 1.4rem;
+/* BOX MAIOR */
+.compra-box {
+  background: #ffffff;
+  padding: 40px;
+  width: 500px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-/* ===========================
-   RESUMO
-=========================== */
+/* TÍTULOS */
+h1 {
+  font-size: 28px;
+}
 
-.programa-box {
+.preco {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+/* ESCONDE RADIO */
+input[type="radio"] {
+  display: none;
+}
+
+/* BOTÕES */
+.opcoes {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.opcoes label {
+  flex: 1;
+  text-align: center;
+  padding: 14px;
+  border: 2px solid #133337;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.opcoes label i {
+  margin-right: 6px;
+}
+
+/* SELECIONADO */
+#pix:checked ~ .opcoes label[for="pix"],
+#boleto:checked ~ .opcoes label[for="boleto"],
+#cartao:checked ~ .opcoes label[for="cartao"] {
   background: #133337;
   color: #fff;
-  padding: 24px;
-  border-radius: 12px;
+}
+
+/* EMAIL */
+.input-email {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
   margin-bottom: 20px;
 }
 
-.programa-box h3 {
-  margin-bottom: 6px;
-}
-
-.preco-destaque {
-  margin-top: 14px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.avista {
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-.parcelado {
-  opacity: 0.85;
-}
-
-/* ===========================
-   BENEFÍCIOS
-=========================== */
-
-.beneficios {
-  list-style: none;
-  padding: 16px 18px;
-  margin-top: 20px;
-
-  background: #f7fbfb;
-  border: 1px solid #e3ecec;
+/* CONTEÚDO */
+.conteudo {
+  display: none;
+  margin-top: 15px;
+  padding: 20px;
   border-radius: 12px;
+  background: #f9f9f9;
 }
 
-.beneficios li {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-
-  padding: 8px 0;
-  color: #133337;
-  font-size: 0.95rem;
-}
-
-.beneficios li:not(:last-child) {
-  border-bottom: 1px solid #e6eeee;
-}
-
-.beneficios i {
-  color: #1d4d53;
-  width: 18px;
+/* MOSTRAR */
+#pix:checked ~ .conteudos .pix {
+  display: block;
   text-align: center;
 }
 
-/* ===========================
-   PAGAMENTO
-=========================== */
-
-.pagamento {
-  margin-bottom: 15px;
+#boleto:checked ~ .conteudos .boleto {
+  display: block;
 }
 
-.pagamento h3 {
-  margin-bottom: 10px;
-  color: #133337;
+.boleto {
+  text-align: center;
 }
 
-.opcao {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-
-  margin-bottom: 6px;
-  color: #133337;
-  font-weight: 500;
+.boleto .btn-pagamento {
+  display: block;
+  margin: 20px auto 0 auto;
+  width: 200px;
 }
 
-/* ===========================
-   FORMULÁRIO
-=========================== */
+#cartao:checked ~ .conteudos .cartao {
+  display: block;
+  text-align: center;
+}
 
-.formulario form {
+/* QR */
+.qr {
+  width: 220px;
+  margin: 20px auto;
+  display: block;
+  border: 8px solid #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/* FORM */
+form {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 15px;
+  margin-top: 15px;
 }
 
-.formulario label {
-  font-weight: 600;
-  font-size: 0.85rem;
-  color: #133337;
+form input {
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
 }
 
-.formulario input {
-  padding: 12px 14px;
-  border: 1px solid #cfd8dc;
-  border-radius: 10px;
-  background: #fafafa;
-  font-size: 1rem;
-}
-
-/* ===========================
-   LINHA
-=========================== */
-
+/* LINHA CERTA */
 .linha {
   display: flex;
-  gap: 12px;
+  gap: 10px;
 }
 
-.linha div {
-  flex: 1;
+.linha input {
+  width: 50%;
 }
 
-/* ===========================
-   BOTÃO
-=========================== */
-
-.btn-comprar {
-  width: 100%;
+/* BOTÃO */
+.btn-pagamento {
+  display: inline-block;
+  text-align: center;
+  padding: 14px;
   background: #af634d;
   color: #fff;
-  padding: 16px;
-  border-radius: 12px;
-  font-weight: 700;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
   border: none;
+  outline: none;
   cursor: pointer;
-  transition: 0.25s;
-  font-size: 1rem;
 }
 
-.btn-comprar:hover {
+.btn-pagamento:hover {
   background: #e17f64;
-  transform: translateY(-2px);
 }
 
-/* ===========================
-   SEGURANÇA
-=========================== */
-
-.seguro {
-  margin-top: 15px;
-  font-size: 0.85rem;
-  color: #133337;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  opacity: 0.8;
+.btn-pagamento:active {
+  transform: scale(0.98);
 }
 
-/* ===========================
-   RESPONSIVO
-=========================== */
-
-@media (max-width: 900px) {
-  .container.checkout {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 500px) {
-  .linha {
-    flex-direction: column;
-  }
-
-  .resumo,
-  .formulario {
-    padding: 20px;
-  }
+/* INFO */
+.info {
+  font-size: 14px;
+  color: #555;
+  margin-top: 10px;
+  text-align: center;
 }

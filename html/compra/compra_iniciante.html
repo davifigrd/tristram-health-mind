@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Compra Plano Iniciante - Tristram Health & Mind</title>
+
+    <title>Compra Plano Iniciante</title>
     <link
       rel="icon"
       type="image/png"
@@ -37,100 +38,122 @@
           </ul>
         </nav>
 
-        <a href="../index.html#ebook" class="btn-header">E-book Gratuito</a>
+        <a href="../index.html#ebook" class="btn-header">
+          E-book Gratuito
+        </a>
       </div>
     </header>
 
     <!-- CONTEÚDO -->
-    <main class="container checkout">
-      <!-- RESUMO -->
-      <section class="resumo">
-        <h2>Resumo da compra</h2>
+    <main class="compra">
+      <div class="compra-box">
+        <h1>Plano Iniciante</h1>
+        <p class="preco">R$ 29,90</p>
 
-        <div class="programa-box">
-          <h3>Plano Iniciante</h3>
-          <p>Yoga para Iniciantes</p>
+        <!-- EMAIL -->
+        <h2>Seu e-mail</h2>
+        <input
+          type="email"
+          placeholder="Digite seu e-mail"
+          class="input-email"
+          required
+        />
 
-          <div class="preco-destaque">
-            <span class="avista">R$ 97,00</span>
-            <span class="parcelado">ou 10x de R$ 9,70</span>
-          </div>
+        <h2>Forma de pagamento</h2>
+
+        <!-- INPUTS -->
+        <input type="radio" name="pagamento" id="pix" checked />
+        <input type="radio" name="pagamento" id="boleto" />
+        <input type="radio" name="pagamento" id="cartao" />
+
+        <!-- BOTÕES -->
+        <div class="opcoes">
+          <label for="pix"><i class="fa-solid fa-qrcode"></i> PIX</label>
+          <label for="boleto"><i class="fa-solid fa-barcode"></i> Boleto</label>
+          <label for="cartao">
+            <i class="fa-solid fa-credit-card"></i> Cartão
+          </label>
         </div>
 
-        <ul class="beneficios">
-          <li><i class="fa-solid fa-check"></i> Acesso imediato</li>
-          <li><i class="fa-solid fa-check"></i> 4 semanas de acompanhamento</li>
-          <li><i class="fa-solid fa-check"></i> IA com correção de postura</li>
-          <li><i class="fa-solid fa-check"></i> Suporte especializado</li>
-        </ul>
-      </section>
+        <!-- CONTEÚDOS -->
+        <div class="conteudos">
+          <!-- PIX -->
+          <div class="conteudo pix">
+            <h3>Pague com PIX</h3>
+            <p>Escaneie o QR Code:</p>
+            <img src="../../img/qr_code.png" class="qr" />
+            <p class="info">Chave pix: pagamento@tristram.com</p>
+          </div>
 
-      <!-- FORMULÁRIO -->
-      <section class="formulario">
-        <h2>Pagamento</h2>
+          <!-- BOLETO -->
+          <div class="conteudo boleto">
+            <h3>Pagamento via Boleto</h3>
+            <p>Você será redirecionado para gerar seu boleto:</p>
 
-        <form action="sucesso_compra.html" method="get">
-          <!-- PAGAMENTO -->
-          <div class="pagamento">
-            <h3>Forma de pagamento</h3>
-
-            <label class="opcao">
-              <input type="radio" name="pagamento" value="cartao" checked />
-              Cartão de crédito
-            </label>
-
-            <label class="opcao">
-              <input type="radio" name="pagamento" value="pix" />
-              PIX
-            </label>
-
-            <label class="opcao">
-              <input type="radio" name="pagamento" value="boleto" />
-              Boleto
-            </label>
+            <a
+              href="../../img/boletos/boleto_iniciante.pdf"
+              download="boleto_iniciante.pdf"
+              class="btn-pagamento"
+            >
+              Gerar boleto
+            </a>
           </div>
 
           <!-- CARTÃO -->
-          <div class="box">
-            <label>Nome completo</label>
-            <input type="text" name="nome" required />
+          <div class="conteudo cartao">
+            <h3>Pagamento com Cartão</h3>
 
-            <label>E-mail</label>
-            <input type="email" name="email" required />
+            <form action="../sucesso/sucesso_compra.html">
+              <input
+                type="text"
+                placeholder="Número do cartão"
+                inputmode="numeric"
+                pattern="[0-9]{13,16}"
+                maxlength="16"
+                required
+              />
 
-            <label>Número do cartão</label>
-            <input type="text" name="cartao" required />
+              <input
+                type="text"
+                placeholder="Nome no cartão"
+                pattern="[A-Za-zÀ-ÿ\s]+"
+                required
+              />
 
-            <div class="linha">
-              <div>
-                <label>Validade</label>
-                <input type="text" name="validade" required />
+              <div class="linha">
+                <input
+                  type="text"
+                  placeholder="MMAA"
+                  inputmode="numeric"
+                  pattern="(0[1-9]|1[0-2])[0-9]{2}"
+                  maxlength="4"
+                  required
+                />
+
+                <input
+                  type="text"
+                  placeholder="CVV"
+                  inputmode="numeric"
+                  pattern="[0-9]{3,4}"
+                  maxlength="4"
+                  required
+                />
               </div>
 
-              <div>
-                <label>CVV</label>
-                <input type="text" name="cvv" required />
-              </div>
-            </div>
+              <button type="submit" class="btn-pagamento">
+                Finalizar pagamento
+              </button>
+            </form>
           </div>
-
-          <button type="submit" class="btn-comprar">
-            <i class="fa-solid fa-lock"></i>
-            Confirmar compra segura
-          </button>
-        </form>
-
-        <p class="seguro">
-          <i class="fa-solid fa-shield-halved"></i>
-          Pagamento 100% seguro e criptografado
-        </p>
-      </section>
+        </div>
+      </div>
     </main>
+
     <!-- FOOTER -->
     <footer>
       <div class="footer-inner">
         <div class="footer-logo">
-          <a href="../html/index.html">Tristram Health & Mind</a>
+          <a href="../index.html">Tristram Health & Mind</a>
         </div>
 
         <nav class="footer-nav">
@@ -148,7 +171,9 @@
           <a href="#"><i class="fa-brands fa-facebook"></i></a>
         </div>
 
-        <p class="footer-copy">© 2025 Tristram Health & Mind</p>
+        <p class="footer-copy">
+          © 2026 Tristram Health & Mind. Todos os direitos reservados.
+        </p>
       </div>
     </footer>
   </body>

@@ -110,7 +110,7 @@ nav ul li a:hover {
 }
 
 .bloco.baixo {
-  flex-direction: row-reverse;
+  flex-direction: row;
 }
 
 .texto {

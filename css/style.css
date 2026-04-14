@@ -430,6 +430,7 @@ footer {
   background-color: #133337;
   color: #ffffff;
   padding: 14px 0;
+  flex: 1;
 }
 
 .footer-inner {

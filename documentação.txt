@@ -1,3 +1,8 @@
 xxxx
 
 verificar se código está compativel com o pdf do que o flavio pediu ou se falta
+
+https://devtools.com.br/gerador-boleto/
+
+https://www.canva.com/pt_br/gerador-qr-code/
+
