@@ -1,2 +1,4 @@
 verificar se código está compativel com
 o pdf do que o flavio pediu ou se falta algo
+
+remover pasta instruções depois de conferir
