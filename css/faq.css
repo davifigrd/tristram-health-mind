@@ -1,0 +1,53 @@
+.faq-container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* TÍTULO */
+.faq-container h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #133337;
+  margin-bottom: 10px;
+}
+
+.faq-subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* SEÇÕES */
+.faq-section {
+  margin-bottom: 30px;
+}
+
+.faq-section h2 {
+  color: #133337;
+  margin-bottom: 15px;
+}
+
+/* CAIXAS */
+details {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  padding: 14px;
+  background: #f9fbfa;
+}
+
+/* PERGUNTA */
+summary {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* RESPOSTA */
+details p {
+  margin-top: 10px;
+  color: #444;
+}

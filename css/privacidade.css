@@ -1,0 +1,94 @@
+body {
+  background: linear-gradient(180deg, #f4f7f6, #ffffff);
+}
+
+.container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* TÍTULO */
+.container h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  color: #133337;
+  margin-bottom: 10px;
+}
+
+.updated {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 40px;
+}
+
+/* SEÇÕES */
+.container section {
+  margin-bottom: 35px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+/* REMOVE BORDA DA ÚLTIMA */
+.container section:last-child {
+  border-bottom: none;
+}
+
+/* SUBTÍTULOS */
+.container h3 {
+  font-size: 1.3rem;
+  color: #133337;
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 14px;
+}
+
+/* LINHA DECORATIVA */
+.container h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 4px;
+  height: 18px;
+  background-color: #af634d;
+  border-radius: 2px;
+}
+
+/* TEXTO */
+.container p {
+  font-size: 0.97rem;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+/* LISTA */
+.container ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.container li {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+/* BOLINHA MAIS BONITA */
+.container li::marker {
+  color: #af634d;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .container {
+    padding: 25px 20px;
+  }
+
+  .container h2 {
+    font-size: 1.8rem;
+  }
+}

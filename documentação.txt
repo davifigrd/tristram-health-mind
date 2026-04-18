@@ -1,4 +1,146 @@
-verificar se código está compativel com
-o pdf do que o flavio pediu ou se falta algo
+Documentação do Projeto Tristram Health & Mind
 
-remover pasta instruções depois de conferir
+---
+
+ 1. Descrição do Projeto
+
+O projeto Tristram Health & Mind é um site institucional com foco na
+apresentação e venda de programas voltados ao bem-estar físico e 
+mental, incluindo yoga, meditação e flexibilidade.
+
+O sistema permite que o usuário:
+
+• Visualize planos disponíveis
+• Acesse detalhes de cada programa
+• Simule a compra de um plano
+• Escolha formas de pagamento (PIX, boleto ou cartão)
+• Receba confirmação de compra
+
+---
+
+ 2. Tecnologias Utilizadas
+
+ Front-end
+• HTML5
+  Utilizado para estruturar todas as páginas do site de forma semântica.
+
+• CSS3
+  Responsável pela estilização, layout, responsividade e organização visual.
+
+ Bibliotecas externas
+
+ Font Awesome (CDN)
+  Utilizado para ícones (redes sociais, pagamento, etc.).
+
+---
+
+ 3. Estrutura do Projeto
+
+O projeto está organizado da seguinte forma:
+
+/css
+  ├── compra.css       (estilo das páginas de compra)
+  ├── contato.css      (estilo da página de contato)
+  ├── faq.css      (estilo da página de FAQ)
+  ├── plano.css        (estilo das páginas de plano)
+  ├── privacidade.css  (estilo da página de privacidade)
+  └── style.css        (estilo global do site)
+
+/html
+  ├── contato.html     (página de contato)
+  ├── faq.html     (página de FAQ)
+  ├── index.html       (página principal)
+  ├── privacidade.html (política de privacidade)
+  ├── compra/          (fluxo de compra)
+  │    ├── compra_flex.html
+  │    ├── compra_iniciante.html
+  │    └── compra_meditacao.html
+  ├── plano/           (páginas relacionadas aos planos)
+  │    ├── plano_flex.html
+  │    ├── plano_iniciante.html
+  │    └── plano_meditacao.html
+  └── sucesso/         (páginas de confirmação)
+       ├── sucesso_compra.html
+       ├── sucesso_contato.html
+       └── sucesso_e-book.html
+
+/img
+  ├── e-book.png
+  ├── flex.png
+  ├── icone.ico
+  ├── iniciante.png
+  ├── logo.png
+  ├── meditacao.png
+  ├── qr_code.png
+  ├── yoga_gun.png
+  ├── boletos/         (imagens de boletos)
+  │    ├── boleto_flex.png   
+  │    ├── boleto_iniciante.png   
+  │    ├── boleto_meditacao.png   
+  └── professores/     (imagens dos professores)
+       ├── professor_davi.png
+       ├── professor_eduardo.png
+       ├── professor_flavio.png
+       ├── professor_joao.png
+       ├── professor_julio.png
+       └── professor_kauan.png
+
+---
+
+ 4. Funcionalidades Implementadas
+
+• Navegação entre páginas
+• Layout responsivo (adaptado para celular)
+• Cards de programas
+• Páginas individuais de planos
+• Sistema de seleção de pagamento:
+• Página de confirmação de compra
+
+  • PIX
+  • Boleto (download de PDF)
+  • Cartão (formulário HTML)
+
+---
+
+ 5. Autores
+
+• Davi Figueiredo Rocha Dutra
+• Kauan De Lima E Silva Correia
+• João Pedro Dallia De Assis
+• Júlio César De Luna Restum
+• Eduardo Dutra Franzini
+
+---
+
+ 6. Como Executar/Testar o Projeto
+
+ Método 1 (mais simples)
+
+1. Baixar ou extrair o projeto
+2. Abrir o arquivo `index.html`
+3. Navegar normalmente pelo site
+
+ Método 2 (recomendado)
+
+1. Abrir o projeto no Visual Studio Code
+2. Instalar a extensão Live Server
+3. Clicar com botão direito no `index.html`
+4. Selecionar "Open with Live Server"
+
+---
+
+ 7. Fluxo de Teste
+
+Para testar completamente o sistema:
+
+1. Acessar a página inicial
+2. Escolher um programa
+3. Clicar em "Garantir meu acesso agora"
+4. Selecionar forma de pagamento:
+   • PIX → visualizar QR Code
+   • Boleto → baixar PDF
+   • Cartão → preencher formulário
+5. Finalizar pagamento
+6. Verificar página de sucesso
+
+---
