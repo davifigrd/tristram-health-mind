@@ -263,31 +263,93 @@ nav ul li a:hover {
   margin: 60px auto;
   padding: 0 20px;
   display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  text-align: center;
+}
+
+.sobre-conteudo {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 380px;
+}
+
+.sobre-conteudo h2 {
+  margin-bottom: 20px;
+}
+
+.sobre-conteudo p {
+  margin-bottom: 18px;
+  line-height: 1.7;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.sobre-conteudo a {
+  margin-top: auto;
+}
+
+/* ===========================
+   TABELA DE RESULTADOS
+=========================== */
+.sobre-estatisticas {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 50px;
+
+  width: fit-content;
+  min-width: 280px;
+
+  background: linear-gradient(135deg, #133337, #1d4d53);
+  color: white;
+
+  padding: 22px;
+  border-radius: 14px;
 }
 
-.sobre-image {
-  flex: 1;
+.sobre-estatisticas h3 {
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+  text-align: center;
 }
 
-.sobre-image img {
+.tabela-estatisticas-mini {
   width: 100%;
-  height: 400px;
-  object-fit: cover;
+  border-collapse: separate;
+  border-spacing: 0 16px;
+  user-select: none;
 }
 
-.sobre-texto {
-  flex: 1;
+.tabela-estatisticas-mini tr {
+  transition: 0.2s;
 }
 
-.sobre-texto h2 {
-  color: #133337;
+.tabela-estatisticas-mini tr:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: scale(1.02);
+  border-radius: 12px;
 }
 
-.sobre-texto p {
-  color: #133337;
-  margin-top: 16px;
+.tabela-estatisticas-mini td {
+  padding: 16px 14px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.tabela-estatisticas-mini td:first-child {
+  border-radius: 12px 0 0 12px;
+  opacity: 0.9;
+}
+
+.tabela-estatisticas-mini td:last-child {
+  border-radius: 0 12px 12px 0;
+  text-align: right;
+  font-weight: bold;
+  color: #ffb199;
 }
 
 /* ===========================
