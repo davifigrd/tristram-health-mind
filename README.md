@@ -33,47 +33,6 @@ A plataforma tem como objetivo apresentar e vender programas de bem-estar, como 
 
 ---
 
-## 📁 Estrutura do Projeto
-/css
-├── compra.css
-├── contato.css
-├── faq.css
-├── plano.css
-├── privacidade.css
-└── style.css
-
-/html
-├── index.html
-├── contato.html
-├── faq.html
-├── privacidade.html
-├── compra/
-│ ├── compra_flex.html
-│ ├── compra_iniciante.html
-│ └── compra_meditacao.html
-├── plano/
-│ ├── plano_flex.html
-│ ├── plano_iniciante.html
-│ └── plano_meditacao.html
-└── sucesso/
-├── sucesso_compra.html
-├── sucesso_contato.html
-└── sucesso_e-book.html
-
-/img
-├── e-book.png
-├── flex.png
-├── iniciante.png
-├── meditacao.png
-├── logo.png
-├── qr_code.png
-├── yoga_gun.png
-├── boletos/
-└── professores/
-
-
----
-
 ## ⚙️ Funcionalidades Implementadas
 
 ✨ Navegação entre páginas  
