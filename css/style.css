@@ -1,6 +1,6 @@
-/* ==================================================
+/* ===========================
    RESET E BASE
-================================================== */
+=========================== */
 * {
   margin: 0;
   padding: 0;
@@ -299,9 +299,7 @@ nav ul li a:hover {
   margin-top: auto;
 }
 
-/* ===========================
-   TABELA DE RESULTADOS
-=========================== */
+/* TABELA DE RESULTADOS */
 .sobre-estatisticas {
   flex: 1;
   display: flex;
@@ -537,9 +535,6 @@ footer {
   flex-wrap: wrap;
 }
 
-/* ===========================
-   FOOTER-LOGO
-=========================== */
 .footer-logo a {
   font-size: 1.5rem;
   font-weight: bold;
@@ -555,9 +550,7 @@ footer {
   height: 200px;
   width: auto;
 }
-/* ===========================
-   FOOTER-NAV
-=========================== */
+
 .footer-nav a {
   font-size: 0.95rem;
 }
@@ -578,9 +571,7 @@ footer {
   flex-direction: column;
   gap: 12px;
 }
-/* ===========================
-   FOOTER-INFO
-=========================== */
+
 .footer-info {
   color: #ffffff;
   font-size: 0.9rem;
@@ -601,9 +592,6 @@ footer {
   min-width: 16px;
 }
 
-/* ===========================
-   FOOTER-SOCIAL
-=========================== */
 .footer-social {
   display: flex;
   gap: 16px;
@@ -621,9 +609,7 @@ footer {
   color: #af634d;
   transform: translateY(-2px);
 }
-/* ===========================
-   FOOTER-COPYRIGHT
-=========================== */
+
 .footer-copy {
   width: 100%;
   text-align: center;

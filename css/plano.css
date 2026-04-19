@@ -1,5 +1,5 @@
 /* ===========================
-   CONTAINER
+   PLANO
 =========================== */
 .plano-container {
   max-width: 900px;
@@ -7,9 +7,6 @@
   padding: 0 20px;
 }
 
-/* ===========================
-   BLOCO PRINCIPAL
-=========================== */
 .bloco {
   display: flex;
   align-items: center;
@@ -17,9 +14,6 @@
   margin-bottom: 80px;
 }
 
-/* ===========================
-   TEXTO
-=========================== */
 .texto {
   flex: 1;
 }

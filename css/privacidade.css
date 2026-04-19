@@ -1,3 +1,6 @@
+/* ===========================
+   POLÍTICA DE PRIVACIDADE
+=========================== */
 .privacidade-box {
   max-width: 900px;
   margin: 60px auto;
@@ -7,7 +10,6 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-/* TÍTULO */
 .container h2 {
   font-size: 2.2rem;
   text-align: center;
@@ -22,19 +24,16 @@
   margin-bottom: 40px;
 }
 
-/* SEÇÕES */
 .container section {
   margin-bottom: 35px;
   padding-bottom: 20px;
   border-bottom: 1px solid #eee;
 }
 
-/* REMOVE BORDA DA ÚLTIMA */
 .container section:last-child {
   border-bottom: none;
 }
 
-/* SUBTÍTULOS */
 .container h3 {
   font-size: 1.3rem;
   color: #133337;
@@ -43,7 +42,6 @@
   padding-left: 14px;
 }
 
-/* LINHA DECORATIVA */
 .container h3::before {
   content: "";
   position: absolute;
@@ -55,14 +53,12 @@
   border-radius: 2px;
 }
 
-/* TEXTO */
 .container p {
   font-size: 0.97rem;
   color: #444;
   margin-bottom: 12px;
 }
 
-/* LISTA */
 .container ul {
   padding-left: 20px;
   margin-top: 10px;
@@ -73,12 +69,13 @@
   position: relative;
 }
 
-/* BOLINHA MAIS BONITA */
 .container li::marker {
   color: #af634d;
 }
 
-/* RESPONSIVO */
+/* ===========================
+   RESPONSIVO
+=========================== */
 @media (max-width: 768px) {
   .container {
     padding: 25px 20px;
