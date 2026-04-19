@@ -1,5 +1,5 @@
 /* ===========================
-   ÁREA PRINCIPAL
+   COMPRA
 =========================== */
 .compra {
   display: flex;
@@ -7,9 +7,7 @@
   padding: 60px 20px;
 }
 
-/* ===========================
-   BOX PRINCIPAL
-=========================== */
+/* ============= BOX PRINCIPAL ============= */
 .compra-box {
   width: 1000px;
   max-width: 95%;
@@ -23,12 +21,31 @@
   align-items: flex-start;
 }
 
-/* ===========================
-   LADO ESQUERDO
-=========================== */
+/* ============= IMAGEM ============= */
+.img-grande {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 12px;
+  margin-top: 20px;
+  display: block;
+  margin: 25px auto 0 auto;
+}
+
+.hover-up {
+  transition: transform 0.25s ease;
+}
+
+.hover-up:hover {
+  transform: scale(1.02);
+}
+
+/* ============= LADO ESQUERDO ============= */
 .lado-esquerdo {
+  flex-direction: column;
   flex: 1;
   text-align: center;
+  display: flex;
+  align-items: center;
 }
 
 .lado-esquerdo h1 {
@@ -36,7 +53,27 @@
   margin-bottom: 10px;
 }
 
-/* preços */
+.lado-esquerdo h1,
+.lado-esquerdo p {
+  width: 100%;
+}
+
+.lado-esquerdo a {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* ============= LADO DIREITO ============= */
+.lado-direito {
+  flex: 1;
+}
+
+.bloco {
+  margin-bottom: 25px;
+}
+
+/* ============= PREÇO ============= */
 .preco-antigo {
   text-decoration: line-through;
   opacity: 0.7;
@@ -53,39 +90,13 @@
   opacity: 0.85;
 }
 
-/* ===========================
-   IMAGEM
-=========================== */
-.img-grande {
-  width: 100%;
-  max-width: 380px;
-  border-radius: 12px;
-  margin-top: 20px;
+.preco-antigo,
+.preco,
+.parcelado {
+  text-align: center;
 }
 
-/* leve interação visual */
-.hover-up {
-  transition: transform 0.25s ease;
-}
-
-.hover-up:hover {
-  transform: scale(1.02);
-}
-
-/* ===========================
-   LADO DIREITO
-=========================== */
-.lado-direito {
-  flex: 1;
-}
-
-.bloco {
-  margin-bottom: 25px;
-}
-
-/* ===========================
-   EMAIL
-=========================== */
+/* ============= EMAIL ============= */
 .input-email {
   width: 100%;
   padding: 14px;
@@ -106,9 +117,15 @@
   margin-top: 5px;
 }
 
-/* ===========================
-   OPÇÕES DE PAGAMENTO
-=========================== */
+/* ============= CONTEÚDOS ============= */
+.conteudo {
+  display: none;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+/* ============= OPÇÕES DE PAGAMENTO ============= */
 input[type="radio"] {
   display: none;
 }
@@ -137,7 +154,7 @@ input[type="radio"] {
   transform: translateY(-2px);
 }
 
-/* ativo */
+/* ============= PAGAMENTO ATIVO ============= */
 #pix:checked ~ .opcoes label[for="pix"],
 #boleto:checked ~ .opcoes label[for="boleto"],
 #cartao:checked ~ .opcoes label[for="cartao"] {
@@ -145,26 +162,10 @@ input[type="radio"] {
   color: #fff;
 }
 
-/* ===========================
-   CONTEÚDOS
-=========================== */
-.conteudo {
-  display: none;
-  background: #f9f9f9;
-  padding: 15px;
-  border-radius: 12px;
-}
-
-/* PIX */
+/* ============= PIX ============= */
 #pix:checked ~ .conteudos .pix {
   display: block;
   text-align: center;
-}
-
-.qr {
-  width: 180px;
-  margin: 10px auto;
-  border-radius: 12px;
 }
 
 .conteudo.pix .info {
@@ -172,7 +173,14 @@ input[type="radio"] {
   font-weight: 500;
 }
 
-/* BOLETO */
+/* ============= QR CODE ============= */
+.qr {
+  width: 180px;
+  margin: 10px auto;
+  border-radius: 12px;
+}
+
+/* ============= BOLETO ============= */
 #boleto:checked ~ .conteudos .boleto {
   display: block;
   text-align: center;
@@ -185,14 +193,12 @@ input[type="radio"] {
   line-height: 1.4;
 }
 
-/* CARTÃO */
+/* ============= CARTÃO ============= */
 #cartao:checked ~ .conteudos .cartao {
   display: block;
 }
 
-/* ===========================
-   BOTÃO PAGAMENTO (integrado com style.css)
-=========================== */
+/* ============= BOTÃO PAGAMENTO ============= */
 .btn-pagamento {
   display: inline-block;
   background: #af634d;
@@ -219,9 +225,7 @@ input[type="radio"] {
   transform: scale(0.97);
 }
 
-/* ===========================
-   FORM CARTÃO
-=========================== */
+/* ============= FORMULÁRIO CARTÃO ============= */
 form {
   display: flex;
   flex-direction: column;
@@ -249,9 +253,7 @@ form input:focus {
   width: 50%;
 }
 
-/* ===========================
-   SEGURANÇA
-=========================== */
+/* ============= SEGURANÇA ============= */
 .seguranca-pagamento {
   margin-top: 15px;
   padding: 10px 12px;
@@ -270,44 +272,7 @@ form input:focus {
 }
 
 /* ===========================
-   AJUSTE VISUAL DO LADO ESQUERDO
-=========================== */
-
-.lado-esquerdo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-/* garante alinhamento consistente do conteúdo */
-.lado-esquerdo h1,
-.lado-esquerdo p {
-  width: 100%;
-}
-
-/* imagem mais centralizada e "encaixada" no bloco */
-.lado-esquerdo a {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-/* caso a imagem não esteja dentro de <a>, ainda funciona */
-.img-grande {
-  display: block;
-  margin: 25px auto 0 auto;
-}
-
-/* melhora leve espaçamento entre preço e imagem */
-.preco-antigo,
-.preco,
-.parcelado {
-  text-align: center;
-}
-
-/* ===========================
-   RESPONSIVO
+   RESPONSIVO MOBILE
 =========================== */
 @media (max-width: 900px) {
   .compra-box {

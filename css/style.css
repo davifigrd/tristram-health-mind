@@ -1,5 +1,5 @@
 /* ===========================
-   RESET E BASE
+   BASE
 =========================== */
 * {
   margin: 0;
@@ -16,24 +16,28 @@ body {
   min-height: 100vh;
   background: linear-gradient(180deg, #f4f7f6, #ffffff);
 }
-
+/* ============= CENTRALIZAÇÃO E LIMITAÇÃO ============= */
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
+/* ============= REMOÇÃO DE SUBLINHADO E AQUISIÇÃO DE COR ============= */
 a {
   text-decoration: none;
   color: inherit;
 }
 
+/* ============= RESPONSIVA, SEM DISTORÇÃO E BORDA ARREDONDADA ============= */
 img {
   max-width: 100%;
+  height: auto;
   display: block;
   border-radius: 8px;
 }
 
+/* ============= PARDÃO DE TAMANHO E ESPAÇAMENTO ============= */
 h2 {
   font-size: 2rem;
   margin-bottom: 10px;
@@ -50,10 +54,6 @@ h2 {
   border-radius: 30px;
   font-weight: bold;
   margin-top: 20px;
-  transition:
-    transform 0.15s ease,
-    filter 0.3s ease,
-    background-color 0.3s ease;
 }
 
 .btn-primary:hover {
@@ -68,10 +68,6 @@ h2 {
   border-radius: 20px;
   font-weight: bold;
   margin-top: 12px;
-  transition:
-    transform 0.15s ease,
-    filter 0.3s ease,
-    background-color 0.3s ease;
 }
 
 .btn-card:hover {
@@ -84,31 +80,29 @@ h2 {
   padding: 8px 20px;
   border-radius: 20px;
   font-weight: bold;
-  transition:
-    transform 0.15s ease,
-    filter 0.3s ease,
-    background-color 0.3s ease;
 }
 
 .btn-header:hover {
   background-color: #e17f64;
 }
 
+/* ============= INTERAÇÃO COM BOTÕES ============= */
+.btn-primary,
+.btn-card,
 .btn-header,
-.btn-pagamento,
 .form-ebook button {
   transition:
     transform 0.15s ease,
-    filter 0.3s ease,
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15)
     background-color 0.3s ease;
 }
 
 .btn-primary:active,
 .btn-card:active,
 .btn-header:active,
-.btn-pagamento:active,
 .form-ebook button:active {
-  transform: scale(0.97);
+  transform: scale(0.96);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* ===========================
@@ -175,11 +169,6 @@ nav ul li a:hover {
 .hero-content h1 {
   font-size: 2.8rem;
   line-height: 1.2;
-  color: #133337;
-}
-
-.hero-content h1 span {
-  color: #133337;
 }
 
 .hero-content p {
@@ -252,12 +241,10 @@ nav ul li a:hover {
 }
 
 .card-info h3 {
-  color: #133337;
   margin-bottom: 8px;
 }
 
 .card-info p {
-  color: #133337;
   font-size: 0.95rem;
 }
 
@@ -272,7 +259,6 @@ nav ul li a:hover {
   justify-content: center;
   align-items: stretch;
   gap: 40px;
-  text-align: center;
 }
 
 .sobre-conteudo {
@@ -282,36 +268,35 @@ nav ul li a:hover {
   flex-direction: column;
   justify-content: space-between;
   min-height: 380px;
+  text-align: center;
 }
 
 .sobre-conteudo h2 {
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .sobre-conteudo p {
   margin-bottom: 18px;
   line-height: 1.7;
-  word-wrap: break-word;
   overflow-wrap: break-word;
+  text-align: center;
 }
 
 .sobre-conteudo a {
   margin-top: auto;
 }
 
-/* TABELA DE RESULTADOS */
+/* ============= TABELA DE RESULTADOS ============= */
 .sobre-estatisticas {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  width: fit-content;
   min-width: 280px;
-
+  max-width: 350px;
   background: linear-gradient(135deg, #133337, #1d4d53);
   color: white;
-
   padding: 22px;
   border-radius: 14px;
 }
@@ -430,7 +415,6 @@ nav ul li a:hover {
 }
 
 .ebook-texto p {
-  color: #133337;
   margin-top: 10px;
   margin-bottom: 20px;
 }
@@ -482,7 +466,7 @@ nav ul li a:hover {
 }
 
 /* ===========================
-   SUCESSO (CONTATO / E-BOOK / COMPRA)
+   SUCESSO (PÁGINAS DE CONFIRMAÇÃO)
 =========================== */
 .sucesso {
   flex: 1;
@@ -530,12 +514,14 @@ footer {
   padding: 20px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  gap: 40px;
+  align-items: flex-start;
+  gap: 60px;
   flex-wrap: wrap;
 }
 
 .footer-logo a {
+  display: flex;
+  align-items: flex-start;
   font-size: 1.5rem;
   font-weight: bold;
   color: #ffffff;
@@ -544,6 +530,7 @@ footer {
 .footer-logo {
   display: flex;
   align-items: center;
+  flex: 0 0 auto;
 }
 
 .footer-logo img {
@@ -576,7 +563,7 @@ footer {
   color: #ffffff;
   font-size: 0.9rem;
   line-height: 1.6;
-  max-width: 320px;
+  max-width: 260px;
 }
 
 .footer-info p {
@@ -619,7 +606,7 @@ footer {
 }
 
 /* ===========================
-   RESPONSIVO
+   RESPONSIVO (MOBILE)
 =========================== */
 @media (max-width: 768px) {
   .header-inner {
@@ -641,5 +628,9 @@ footer {
     display: flex;
     gap: 24px;
     align-items: center;
+  }
+
+  .footer-logo img {
+    height: 120px;
   }
 }

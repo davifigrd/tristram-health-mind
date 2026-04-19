@@ -1,3 +1,7 @@
+/* ===========================
+   FAQ
+=========================== */
+
 .faq-container {
   max-width: 900px;
   margin: 60px auto;
@@ -7,7 +11,7 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-/* TÍTULO */
+/* ============= TÍTULO ============= */
 .faq-container h1 {
   text-align: center;
   font-size: 2.2rem;
@@ -21,7 +25,7 @@
   margin-bottom: 40px;
 }
 
-/* SEÇÕES */
+/* ============= SEÇÕES ============= */
 .faq-section {
   margin-bottom: 30px;
 }
@@ -31,7 +35,7 @@
   margin-bottom: 15px;
 }
 
-/* CAIXAS */
+/* ============= CAIXAS ============= */
 details {
   border: 1px solid #eee;
   border-radius: 10px;
@@ -40,13 +44,13 @@ details {
   background: #f9fbfa;
 }
 
-/* PERGUNTA */
+/* ============= PERGUNTA ============= */
 summary {
   font-weight: bold;
   cursor: pointer;
 }
 
-/* RESPOSTA */
+/* ============= RESPOSTA ============= */
 details p {
   margin-top: 10px;
   color: #444;
