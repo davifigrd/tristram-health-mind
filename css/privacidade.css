@@ -1,87 +1,105 @@
 /* ===========================
    POLÍTICA DE PRIVACIDADE
 =========================== */
+
 .privacidade-box {
   max-width: 900px;
   margin: 60px auto;
-  padding: 40px;
+  padding: 50px;
   background: #ffffff;
-  border-radius: 16px;
+  border-radius: 18px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #eef2f3;
 }
 
-.container h2 {
-  font-size: 2.2rem;
+/* ============= HEADER ============= */
+.privacy-header {
   text-align: center;
-  color: #133337;
-  margin-bottom: 10px;
-}
-
-.updated {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #777;
   margin-bottom: 40px;
+  position: static;
 }
 
-.container section {
-  margin-bottom: 35px;
-  padding-bottom: 20px;
+/* ============= TÍTULO ============= */
+.privacidade-box h2 {
+  font-size: 2.4rem;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+}
+
+/* ============= DATA ============= */
+.privacy-header .updated {
+  font-size: 0.92rem;
+  color: #7c9699 !important;
+  margin-top: 6px;
+}
+
+/* ============= SEÇÕES ============= */
+.privacy-section {
+  margin-bottom: 28px;
+  padding-bottom: 22px;
   border-bottom: 1px solid #eee;
 }
 
-.container section:last-child {
+.privacy-section:last-of-type {
   border-bottom: none;
 }
 
-.container h3 {
-  font-size: 1.3rem;
+/* ============= TÍTULOS ============= */
+.privacidade-box h3 {
+  font-size: 1.25rem;
   color: #133337;
   margin-bottom: 12px;
-  position: relative;
-  padding-left: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.container h3::before {
+/* ============= BARRA LATERAL ============= */
+.privacidade-box h3::before {
   content: "";
-  position: absolute;
-  left: 0;
-  top: 6px;
-  width: 4px;
+  width: 5px;
   height: 18px;
-  background-color: #af634d;
-  border-radius: 2px;
+  background: #af634d;
+  border-radius: 6px;
 }
 
-.container p {
-  font-size: 0.97rem;
+/* ============= TEXTO ============= */
+.privacidade-box p {
+  font-size: 0.98rem;
+  line-height: 1.7;
   color: #444;
-  margin-bottom: 12px;
 }
 
-.container ul {
-  padding-left: 20px;
+/* ============= LISTAS ============= */
+.privacidade-box ul {
+  padding-left: 22px;
   margin-top: 10px;
 }
 
-.container li {
+.privacidade-box li {
   margin-bottom: 8px;
-  position: relative;
+  line-height: 1.6;
 }
 
-.container li::marker {
+.privacidade-box li::marker {
   color: #af634d;
 }
 
-/* ===========================
-   RESPONSIVO MOBILE
-=========================== */
+/* ============= BOTÃO VOLTAR ============= */
+.privacy-footer {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* ============= RESPONSIVO MOBILE ============= */
 @media (max-width: 768px) {
-  .container {
-    padding: 25px 20px;
+  .privacidade-box {
+    padding: 30px 20px;
   }
 
-  .container h2 {
-    font-size: 1.8rem;
+  .privacidade-box h2 {
+    font-size: 1.9rem;
   }
 }
