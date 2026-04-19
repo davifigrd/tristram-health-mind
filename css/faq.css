@@ -35,6 +35,10 @@
   margin-bottom: 15px;
 }
 
+.faq-footer {
+  text-align: center;
+}
+
 /* ============= CAIXAS ============= */
 details {
   border: 1px solid #eee;
