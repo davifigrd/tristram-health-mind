@@ -15,7 +15,6 @@
   padding: 40px;
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-
   display: flex;
   gap: 50px;
   align-items: flex-start;
@@ -254,38 +253,48 @@ form input:focus {
 }
 
 /* ============= SEGURANÇA ============= */
-.seguranca-pagamento {
-  margin-top: 15px;
-  padding: 10px 12px;
-  font-size: 13px;
-  color: #555;
-  text-align: center;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-}
-
-.seguranca-pagamento i {
-  color: #133337;
-}
-
-/* ===========================
-   RESPONSIVO MOBILE
-=========================== */
 @media (max-width: 900px) {
   .compra-box {
     flex-direction: column;
     gap: 30px;
+    padding: 25px;
+  }
+
+  .lado-esquerdo,
+  .lado-direito {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .bloco {
+    width: 100%;
+  }
+
+  form,
+  .input-email,
+  .btn-pagamento {
+    width: 100%;
+  }
+
+  .opcoes {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .opcoes label {
+    flex: 1 1 30%;
+    min-width: 100px;
   }
 
   .img-grande {
-    max-width: 100%;
+    margin: 0 auto;
   }
 
   .linha {
     flex-direction: column;
+    width: 100%;
   }
 
   .linha input {

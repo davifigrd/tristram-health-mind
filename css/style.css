@@ -608,29 +608,139 @@ footer {
 /* ===========================
    RESPONSIVO (MOBILE)
 =========================== */
+/* ===========================
+   RESPONSIVO (TABLET / MOBILE)
+=========================== */
 @media (max-width: 768px) {
+
+  /* HEADER */
+  header {
+    position: static;
+  }
+
   .header-inner {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
   nav ul {
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
   }
 
-  .footer-inner {
+  /* HERO */
+  .hero {
     flex-direction: column;
     text-align: center;
   }
 
-  .footer-nav ul {
-    display: flex;
-    gap: 24px;
+  .hero-image img {
+    height: auto;
+  }
+
+  /* SOBRE */
+  .sobre {
+    flex-direction: column;
+  }
+
+  /* EBOOK */
+  .ebook-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* FOOTER */
+  .footer-inner {
+    flex-direction: column;
     align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
   }
 
   .footer-logo img {
     height: 120px;
+  }
+}
+
+/* ===========================
+   RESPONSIVO (MOBILE)
+=========================== */
+@media (max-width: 480px) {
+  html {
+    overflow-x: hidden;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav ul {
+    gap: 8px;
+    font-size: 14px;
+  }
+
+  .sucesso {
+    padding: 60px 20px;
+    min-height: 70vh;
+  }
+
+  .sucesso h2 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+
+  .sucesso p {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .beneficio-item {
+    width: 100%;
+  }
+
+  .sobre-conteudo {
+    min-height: auto;
+  }
+
+  .ebook-image img {
+    height: auto;
+  }
+
+  .sucesso {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+  .footer-nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-info {
+    text-align: center;
   }
 }
